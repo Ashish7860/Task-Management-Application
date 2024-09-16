@@ -1,0 +1,26 @@
+/* Responsive styles for screens 768px wide and below */
+@media (max-width: 768px) {
+    .card {
+      margin-bottom: 10px;
+    }
+    
+    .board {
+      padding: 5px;
+    }
+  }
+  
+  /* Responsive styles for screens 576px wide and below */
+  @media (max-width: 576px) {
+    .add-card {
+      width: 100%;
+    }
+  
+    .inner {
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  }
+  
