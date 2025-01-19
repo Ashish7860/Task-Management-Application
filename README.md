@@ -1,109 +1,64 @@
+# Trello-Like/ Task Management System 
 
-##Kubernetes Assignment: Task Management System
+## Project Overview
+The **Trello-Like Project** is a task management system inspired by Trello. It enables users to manage tasks efficiently by organizing them into different states and provides an interactive drag-and-drop interface.
 
-This guide details the steps to containerize, deploy, and scale a Task Management System using Kubernetes.
+---
 
+## Requirements
 
-Prerequisites
+### Core Features
+1. **Task Creation:**
+   - A form should open when the "Add Task" button is clicked.
+   - The form allows users to input task details (e.g., title, description, due date, etc.).
 
-- Docker installed
-- Kubernetes installed (Minikube)
-- kubectl command-line tool
+2. **Task Management:**
+   - Users can drag and drop tasks between different task states (e.g., "To Do," "In Progress," "Completed") using the Drag-and-Drop API.
 
+3. **Responsive Design:**
+   - The webpage must be responsive and adapt to various screen sizes and resolutions.
 
-##Steps to Build and Deploy the Application
-
-
-1. Build Docker Image
-
-Build the Docker image from the Dockerfile.
-
-bash
-docker build -t ashish07860/task-management-system:1.0 .
-
-
-
-2. Push Docker Image to Docker Hub
-
-Push the image to your Docker Hub repository.
-
-bash
-docker push ashish07860/task-management-system:1.0
+4. **Enhanced Look and Feel:**
+   - The UI should be visually appealing and user-friendly.
+   - Must align with the mockup design provided.
 
 
+## Technologies Used
+- **HTML5:** Structure and semantics of the webpage.
+- **CSS3:** Styling and visual enhancements.
+- **JavaScript:** Interactive features such as drag-and-drop and task management.
+- **Bootstrap:** Framework for responsive layout and pre-styled components.
 
-3. Run Docker Container and Start Minikube
+---
 
-Run the Docker container locally and start Minikube.
+## Development Plan
+### Step 1: Setting Up the Project
+- Initialize the project with a basic HTML structure.
+- Link the CSS and JavaScript files.
+- Include the Bootstrap library.
 
-bash
-docker run -d -p 8080:80 ashish07860/task-management-system:1.0
+### Step 2: Create UI Layout
+- Design the task states (columns for "To Do," "In Progress," "Completed").
+- Add an "Add Task" button and task creation form.
+- Use Bootstrap for grid layout and form styling.
 
-minikube start
+### Step 3: Implement Task Management Features
+- Use JavaScript to:
+  - Open and close the task creation form.
+  - Add new tasks dynamically to the "To Do" column.
+  - Enable drag-and-drop functionality for tasks.
 
+### Step 4: Make the Design Responsive
+- Use CSS media queries and Bootstrap utilities to ensure the design adapts to all screen sizes.
 
+### Step 5: Add Enhancements
+- Apply advanced styling for improved aesthetics.
+- Test and refine the drag-and-drop functionality.
 
-4. Create Kubernetes Deployment YAML
-
-5. Create Kubernetes Service YAML
-
-6. Dockerfile take it from the code
-
-7. Deploy the Application
-
-Use kubectl to deploy the application and expose it.
-
-bash
-kubectl apply -f deployment.yaml
-kubectl apply -f service.yaml
-
-
-
-8. Launch Minikube Tunnel
-
-Open a new terminal and run Minikube tunnel.
-
-bash
-minikube tunnel
+---
 
 
 
-9. Get Services and Deployment Information
-
-Check the status of services and deployments.
-
-bash
-kubectl get services
-kubectl get deployment
 
 
 
-10. Scale the Application
-
-Scale the application by increasing the number of replicas.
-
-bash
-kubectl scale deployment task-management-system-deployment --replicas=5
-kubectl get pods
-
-
-
-11. Access the Application
-
-Fetch the external IP address to access the application.
-
-bash
-kubectl get services
-
-
-
-Conclusion
-
-This README guides you through building, deploying, and scaling a Task Management System using Kubernetes.
-
-
-Technologies Used
-
-- Docker for containerization
-- Minikube for local Kubernetes environment
-- kubectl for command-line interactions
